@@ -1,4 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Container } from "~/components/container";
+import { Header } from "~/components/header";
+import { Nav } from "~/components/nav";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,9 +12,9 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    
-  <div>
-    Tranxhub
-  </div>
+    <Container className="bg-1 bg-no-repeat bg-cover">
+      <Nav />
+      <Header />
+    </Container>
   );
 }

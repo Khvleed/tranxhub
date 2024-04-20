@@ -11,11 +11,17 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  firstname String
-  surname String
-  othername String?
-  email String
-  phone Int
-  DOB DateTime
+  id              Int      @id @default(autoincrement())
+  firstname       String
+  surname         String
+  othername       String?
+  email           String
+  regNumber       String
+  phone           Int
+  DOB             DateTime
+  address         String
+  gender          String
+  faculty         String
+  department      String
+  yearOfAdmission DateTime
 }
