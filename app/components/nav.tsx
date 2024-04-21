@@ -1,10 +1,23 @@
+import { Link } from "@remix-run/react";
+import { Button } from "./ui/button";
+
 export function Nav() {
   return (
-    <nav className="flex bg-slate-100/30 text-cyan-900 justify-between w-full items-center p-8 text-xl">
-      <h1 className="text-3xl">TranxHub</h1>
+    <nav className="flex bg-sky-400/50 text-cyan-900 justify-between w-full items-center p-8 text-xl">
+      <Button variant="link" className="text-3xl" asChild>
+        <Link to="/">TranxHub</Link>
+      </Button>
       <ul className="flex gap-6">
-        <li>Home</li>
-        <li>About</li>
+        <li>
+          <Button variant="link" className="text-lg" asChild>
+            <Link to="/">Home</Link>
+          </Button>
+        </li>
+        <li>
+          <Button variant="link" className="text-lg" asChild>
+            <Link to="/about">About</Link>
+          </Button>
+        </li>
       </ul>
     </nav>
   );
